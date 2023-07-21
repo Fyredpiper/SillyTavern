@@ -1399,8 +1399,7 @@ select option:not(:checked) {
 
 #api_button:hover,
 #api_button_novel:hover,
-#api_button_textgenerationwebui:hover,
-#poe_connect:hover {
+#api_button_textgenerationwebui:hover {
     background-color: green;
 }
 
@@ -1658,6 +1657,11 @@ body.big-avatars .ch_description {
     margin: 0;
     filter: drop-shadow(0px 0px 3px white);
     transition: opacity 0.2s ease-in-out;
+    display: none;
+}
+
+.bg_example:hover .bg_button {
+    display: block;
 }
 
 .bg_button:hover {
@@ -1923,6 +1927,12 @@ grammarly-extension {
     font-size: calc(var(--mainFontSize) - 0.1rem);
     font-weight: bold;
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.rm_stats_button {
+    cursor: pointer;
 }
 
 /* Focus */
@@ -4463,7 +4473,6 @@ toolcool-color-picker {
 }
 
 .openai_restorable,
-.poe_restorable,
 .title_restorable {
     display: flex;
     flex-direction: row;
@@ -4846,7 +4855,9 @@ body.waifuMode .zoomed_avatar {
 
 @media screen and (max-width: 1000px) {
 
-
+    .bg_button {
+        font-size: 15px;
+    }
 
     #extensions_settings,
     #extensions_settings2 {
